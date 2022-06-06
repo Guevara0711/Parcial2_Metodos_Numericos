@@ -39,14 +39,15 @@ while True:
 
 
             #Valores de entrada
-            x0 = input('Primer valor: ')
-            x1 = input('Segundo valor: ')
+            x0 = input('Primera suposicion: ')
+            x1 = input('Segunda suposicion: ')
             e = input('Tolerancia: ')
 
             #Conversion de int a float
             x0 = float(x0)
             x1 = float(x1)
             e = float(e)
+            
 
 
             # verificar si el intevalo escogido no funciona
@@ -71,7 +72,7 @@ while True:
             
             #funcion
             def f(x):
-                return x**3 - 5*x - 9
+                return x**3 - 2*x - 5
 
             #Secante
 
@@ -95,14 +96,14 @@ while True:
                         break
                     
                     condicion = abs(f(x2)) > e
-                print('\nSolucion encontrada x= %0.8f \n' % x2)
+                print('\nLa raiz requerida es = %0.8f \n' % x2)
 
 
             #Valores de entrada
-            x0 = input('Primer valor: ')
-            x1 = input('Segundo valor: ')
+            x0 = input('Primera suposición: ')
+            x1 = input('Segunda suposición: ')
             e = input('Tolerancia: ')
-            N = input('Iteraciones maximas: ')
+            N = input('Maximo de iteraciones: ')
 
             #Conversion de int a float
             x0 = float(x0)
