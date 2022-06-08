@@ -21,11 +21,10 @@ while True:
             #Regula falsi
             def regulafalsi(x0,x1,e):
                 step = 1
-                print('\n\n******* METODO REGULA FALSI *******')
                 condicion = True
                 while condicion:
                     x2 = x0 - (x1-x0) * f(x0)/( f(x1) - f(x0) )
-                    print('Iteraciones %d, x2 = %0.6f  f(x2) = %0.6f' % (step, x2, f(x2)))
+                    print('Iteraciones %d, x = %0.6f  f(x) = %0.6f' % (step, x2, f(x2)))
 
                     if f(x0) * f(x2) < 0:
                         x1 = x2
@@ -77,7 +76,6 @@ while True:
             #Secante
 
             def secante(x0,x1,e,N):
-                print('\n\n******* METODO DE LA SECANTE *******')
                 iteracion = 1
                 condicion = True
                 while condicion:
@@ -86,7 +84,7 @@ while True:
                         break
                     
                     x2 = x0 - (x1-x0)*f(x0)/( f(x1) - f(x0) ) 
-                    print('Iteracion %d, x2 = %0.6f f(x2) = %0.6f' % (iteracion, x2, f(x2)))
+                    print('Iteracion %d, x = %0.6f f(x) = %0.6f' % (iteracion, x2, f(x2)))
                     x0 = x1
                     x1 = x2
                     iteracion = iteracion + 1
