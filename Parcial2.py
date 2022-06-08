@@ -6,7 +6,7 @@ Escoja una opción:
 Solo utilice los numeros correspondientes a las opciones.
 : """
 
-print("Conversor de diferentes bases")
+print("Métodos numéricos de busqueda de raíces")
 
 while True:
     opcion=input(menu)
@@ -20,21 +20,21 @@ while True:
 
             #Regula falsi
             def regulafalsi(x0,x1,e):
-                step = 1
+                paso = 1
                 condicion = True
                 while condicion:
                     x2 = x0 - (x1-x0) * f(x0)/( f(x1) - f(x0) )
-                    print('Iteraciones %d, x = %0.6f  f(x) = %0.6f' % (step, x2, f(x2)))
+                    print('Iteraciones %d, x = %0.6f  f(x) = %0.6f' % (paso, x2, f(x2)))
 
                     if f(x0) * f(x2) < 0:
                         x1 = x2
                     else:
                         x0 = x2
 
-                    step = step + 1
+                    paso = paso + 1
                     condicion = abs(f(x2)) > e
 
-                print('\nSolucion encontrada x= %0.8f \n' % x2)
+                print('\nLa raiz requerida es= %0.8f \n' % x2)
 
 
             #Valores de entrada
@@ -80,7 +80,7 @@ while True:
                 condicion = True
                 while condicion:
                     if f(x0) == f(x1):
-                        print('Division entre 0 no es permitido')
+                        print('Division entre 0 no es permitida')
                         break
                     
                     x2 = x0 - (x1-x0)*f(x0)/( f(x1) - f(x0) ) 
